@@ -16,15 +16,15 @@ final class PlanetRepositoryManager: PlanetRepository {
         self.localRepository = localRepository
     }
     
-    func requestItems(page: UInt) async throws -> [Planet] {
+    func requestItems(pageUrlString: String) async throws -> [Planet] {
         // Try to fetch persisted items first
-        let localItems = try await localRepository.requestItems(page: page)
+        let localItems = try await localRepository.requestItems(pageUrlString: pageUrlString)
         if !localItems.isEmpty {
             return localItems
         }
 
         // If no persisted data, fetch from remote and save locally
-        let remoteItems = try await remoteRepository.requestItems(page: page)
+        let remoteItems = try await remoteRepository.requestItems(pageUrlString: pageUrlString)
         try await saveItems(remoteItems)
                
         return remoteItems

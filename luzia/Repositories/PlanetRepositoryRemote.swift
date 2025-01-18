@@ -10,7 +10,7 @@ import Foundation
 final class PlanetRepositoryRemote: PlanetRepository {
     private let swApiService = SWApiService()
     
-    func requestItems(page: UInt) async throws -> [Planet] {
-        try await swApiService.requestItems(page: page)
+    func requestItems(pageUrlString: String) async throws -> [Planet] {
+        try await swApiService.requestItems(pageUrlString: pageUrlString)
     }
 }

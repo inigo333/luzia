@@ -8,8 +8,6 @@
 import SwiftData
 import SwiftUI
 
-private let pageSize: UInt = 10
-
 @MainActor
 final class PlanetRepositoryPersisted: PlanetRepository {
     private let modelContext: ModelContext
@@ -18,13 +16,11 @@ final class PlanetRepositoryPersisted: PlanetRepository {
         self.modelContext = modelContext
     }
     
-    func requestItems(page: UInt) async throws -> [Planet] {
-        let items = try requestAllItems()
-        let start = Int(page * pageSize)
-        guard items.count > start else { return [] }
-        
-        let end = min(start + Int(pageSize), items.count)
-        return Array(items[start..<end])
+    func requestItems(pageUrlString: String) async throws -> [Planet] {
+        let fetchDescriptor = FetchDescriptor<Planet>(predicate: #Predicate { $0.pageUrlString == pageUrlString },
+                                                      sortBy: [SortDescriptor(\.url)])
+        let items = try modelContext.fetch(fetchDescriptor)
+        return items
     }
     
     func saveItems(_ items: [Planet]) async throws {
@@ -43,11 +39,5 @@ final class PlanetRepositoryPersisted: PlanetRepository {
         } else {
             try modelContext.delete(model: Planet.self)
         }
-    }
-    
-    private func requestAllItems() throws -> [Planet] {
-        let fetchDescriptor = FetchDescriptor<Planet>(sortBy: [SortDescriptor(\.url, order: .forward)])
-        let items = try modelContext.fetch(fetchDescriptor)
-        return items
     }
 }

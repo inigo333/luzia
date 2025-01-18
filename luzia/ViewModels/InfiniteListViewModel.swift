@@ -15,7 +15,6 @@ final class InfiniteListViewModel<Repository: PaginableRepository>: ObservableOb
     private let attribute: SWApiAttribute
     private let repository: Repository
     private let threshold: UInt
-    private var page: UInt = 0
     
     /// - Parameters:
     ///   - repository: paginated repository API to retrieve corresponding items
@@ -26,14 +25,27 @@ final class InfiniteListViewModel<Repository: PaginableRepository>: ObservableOb
         self.threshold = threshold
     }
     
-    func requestInitialSetOfItems() async throws {
-        page = 0
-        await requestItems(page: page)
+    func requestInitialSetOfItems() async {
+        guard let firstPageUrl = attribute.endpointUrl else { return }
+        
+        await requestItems(pageUrlString: firstPageUrl.absoluteString)
+    }
+    
+    func requestItems(pageUrlString: String) async {
+        isLoading = true
+        defer { isLoading = false }
+        
+        do {
+            let newItems = try await repository.requestItems(pageUrlString: pageUrlString)
+            items.append(contentsOf: newItems)
+        } catch {
+            print("\(#function) | \(error)")
+        }
     }
     
     /// Used for infinite scrolling. Only requests more items if pagination criteria is met.
-    func requestMoreItemsIfNeeded(item: Repository.Item) async {
-        guard !isLoading else { return }
+    func requestMoreItemsIfNeeded(item: Repository.Item, nextPageUrlString: String?) async {
+        guard !isLoading, let nextPageUrlString else { return }
         
         guard let index = items.firstIndex(of: item),
               thresholdMet(total: items.count, index: index, threshold: threshold) else {
@@ -41,8 +53,7 @@ final class InfiniteListViewModel<Repository: PaginableRepository>: ObservableOb
         }
             
         // Request next page
-        page += 1
-        await requestItems(page: page)
+        await requestItems(pageUrlString: nextPageUrlString)
     }
     
     func deleteItems(_ items: [Repository.Item]? = nil) async throws {
@@ -59,19 +70,7 @@ final class InfiniteListViewModel<Repository: PaginableRepository>: ObservableOb
         defer { isRefreshing = false }
         
         try await deleteItems()
-        try await requestInitialSetOfItems()
-    }
-    
-    func requestItems(page: UInt) async {
-        isLoading = true
-        defer { isLoading = false }
-        
-        do {
-            let newItems = try await repository.requestItems(page: page)
-            items.append(contentsOf: newItems)
-        } catch {
-            print("\(#function) | \(error)")
-        }
+        await requestInitialSetOfItems()
     }
     
     /// Determines whether the threshold (items from end) has been met for requesting more items.

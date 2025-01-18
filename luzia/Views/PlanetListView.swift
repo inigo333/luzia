@@ -12,6 +12,8 @@ struct PlanetListView: View {
     @StateObject private var viewModel: InfiniteListViewModel<PlanetRepositoryManager>
     @EnvironmentObject private var networkMonitor: NetworkMonitor
     
+    private let navigationTitle = "Star Wars Planets"
+    
     init(modelContext: ModelContext) {
         let remoteRepository = PlanetRepositoryRemote()
         let localRepository = PlanetRepositoryPersisted(modelContext: modelContext)
@@ -24,27 +26,28 @@ struct PlanetListView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                List(viewModel.items) { planet in
-                    PlanetRowView(planet: planet)
-                        .onAppear {
-                            Task { await viewModel.requestMoreItemsIfNeeded(item: planet) }
+                List {
+                    ForEach(viewModel.items) { planet in
+                        NavigationLink(value: planet) {
+                            PlanetRowView(planet: planet)
+                                .onAppear {
+                                    Task { await viewModel.requestMoreItemsIfNeeded(item: planet, nextPageUrlString: planet.nextPageUrlString) }
+                                }
                         }
-                    
-                    if planet == viewModel.items.last {
-                        ProgressView()
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .padding()
                     }
                 }
                 
                 if viewModel.items.isEmpty && !viewModel.isLoading {
-                    PlanetEmptyView { Task { try await viewModel.requestInitialSetOfItems() } }
+                    PlanetEmptyView { Task { await viewModel.requestInitialSetOfItems() } }
                         .padding(.top, 60)
                 }
             }
-            .navigationTitle("Star Wars Planets")
+            .navigationDestination(for: Planet.self) { planet in
+                PlanetView(planet: planet)
+            }
+            .navigationTitle(navigationTitle)
             .onAppear {
-                Task { try await viewModel.requestInitialSetOfItems() }
+                Task { await viewModel.requestInitialSetOfItems() }
             }
             .refreshable {
                 if networkMonitor.isConnected {
@@ -65,4 +68,5 @@ struct PlanetListView: View {
 #Preview {
     let modelContainer = try! ModelContainer(for: Planet.self)
     PlanetListView(modelContext: ModelContext(modelContainer))
+        .environmentObject(NetworkMonitor())
 }
