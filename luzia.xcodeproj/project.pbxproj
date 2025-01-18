@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		6A7B1DFD2D3AE6A800B3FE0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A7B1DE42D3AE6A700B3FE0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A7B1DEB2D3AE6A700B3FE0A;
+			remoteInfo = luzia;
+		};
+		6A7B1E072D3AE6A800B3FE0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A7B1DE42D3AE6A700B3FE0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A7B1DEB2D3AE6A700B3FE0A;
+			remoteInfo = luzia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6A7B1DEC2D3AE6A700B3FE0A /* luzia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luzia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7B1DFC2D3AE6A800B3FE0A /* luziaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = luziaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7B1E062D3AE6A800B3FE0A /* luziaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = luziaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6A7B1DEE2D3AE6A700B3FE0A /* luzia */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = luzia;
+			sourceTree = "<group>";
+		};
+		6A7B1DFF2D3AE6A800B3FE0A /* luziaTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = luziaTests;
+			sourceTree = "<group>";
+		};
+		6A7B1E092D3AE6A800B3FE0A /* luziaUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = luziaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A7B1DE92D3AE6A700B3FE0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7B1DF92D3AE6A800B3FE0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7B1E032D3AE6A800B3FE0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A7B1DE32D3AE6A700B3FE0A = {
+			isa = PBXGroup;
+			children = (
+				6A7B1DEE2D3AE6A700B3FE0A /* luzia */,
+				6A7B1DFF2D3AE6A800B3FE0A /* luziaTests */,
+				6A7B1E092D3AE6A800B3FE0A /* luziaUITests */,
+				6A7B1DED2D3AE6A700B3FE0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A7B1DED2D3AE6A700B3FE0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A7B1DEC2D3AE6A700B3FE0A /* luzia.app */,
+				6A7B1DFC2D3AE6A800B3FE0A /* luziaTests.xctest */,
+				6A7B1E062D3AE6A800B3FE0A /* luziaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A7B1DEB2D3AE6A700B3FE0A /* luzia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A7B1E102D3AE6A800B3FE0A /* Build configuration list for PBXNativeTarget "luzia" */;
+			buildPhases = (
+				6A7B1DE82D3AE6A700B3FE0A /* Sources */,
+				6A7B1DE92D3AE6A700B3FE0A /* Frameworks */,
+				6A7B1DEA2D3AE6A700B3FE0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6A7B1DEE2D3AE6A700B3FE0A /* luzia */,
+			);
+			name = luzia;
+			packageProductDependencies = (
+			);
+			productName = luzia;
+			productReference = 6A7B1DEC2D3AE6A700B3FE0A /* luzia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6A7B1DFB2D3AE6A800B3FE0A /* luziaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A7B1E132D3AE6A800B3FE0A /* Build configuration list for PBXNativeTarget "luziaTests" */;
+			buildPhases = (
+				6A7B1DF82D3AE6A800B3FE0A /* Sources */,
+				6A7B1DF92D3AE6A800B3FE0A /* Frameworks */,
+				6A7B1DFA2D3AE6A800B3FE0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A7B1DFE2D3AE6A800B3FE0A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6A7B1DFF2D3AE6A800B3FE0A /* luziaTests */,
+			);
+			name = luziaTests;
+			packageProductDependencies = (
+			);
+			productName = luziaTests;
+			productReference = 6A7B1DFC2D3AE6A800B3FE0A /* luziaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6A7B1E052D3AE6A800B3FE0A /* luziaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A7B1E162D3AE6A800B3FE0A /* Build configuration list for PBXNativeTarget "luziaUITests" */;
+			buildPhases = (
+				6A7B1E022D3AE6A800B3FE0A /* Sources */,
+				6A7B1E032D3AE6A800B3FE0A /* Frameworks */,
+				6A7B1E042D3AE6A800B3FE0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A7B1E082D3AE6A800B3FE0A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6A7B1E092D3AE6A800B3FE0A /* luziaUITests */,
+			);
+			name = luziaUITests;
+			packageProductDependencies = (
+			);
+			productName = luziaUITests;
+			productReference = 6A7B1E062D3AE6A800B3FE0A /* luziaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A7B1DE42D3AE6A700B3FE0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					6A7B1DEB2D3AE6A700B3FE0A = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					6A7B1DFB2D3AE6A800B3FE0A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 6A7B1DEB2D3AE6A700B3FE0A;
+					};
+					6A7B1E052D3AE6A800B3FE0A = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 6A7B1DEB2D3AE6A700B3FE0A;
+					};
+				};
+			};
+			buildConfigurationList = 6A7B1DE72D3AE6A700B3FE0A /* Build configuration list for PBXProject "luzia" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A7B1DE32D3AE6A700B3FE0A;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6A7B1DED2D3AE6A700B3FE0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A7B1DEB2D3AE6A700B3FE0A /* luzia */,
+				6A7B1DFB2D3AE6A800B3FE0A /* luziaTests */,
+				6A7B1E052D3AE6A800B3FE0A /* luziaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A7B1DEA2D3AE6A700B3FE0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7B1DFA2D3AE6A800B3FE0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7B1E042D3AE6A800B3FE0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A7B1DE82D3AE6A700B3FE0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7B1DF82D3AE6A800B3FE0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A7B1E022D3AE6A800B3FE0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A7B1DFE2D3AE6A800B3FE0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A7B1DEB2D3AE6A700B3FE0A /* luzia */;
+			targetProxy = 6A7B1DFD2D3AE6A800B3FE0A /* PBXContainerItemProxy */;
+		};
+		6A7B1E082D3AE6A800B3FE0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A7B1DEB2D3AE6A700B3FE0A /* luzia */;
+			targetProxy = 6A7B1E072D3AE6A800B3FE0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6A7B1E0E2D3AE6A800B3FE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6A7B1E0F2D3AE6A800B3FE0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A7B1E112D3AE6A800B3FE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"luzia/Preview Content\"";
+				DEVELOPMENT_TEAM = T2K6FMP5B8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Inigo M.";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = imapps.luzia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6A7B1E122D3AE6A800B3FE0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"luzia/Preview Content\"";
+				DEVELOPMENT_TEAM = T2K6FMP5B8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Inigo M.";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = imapps.luzia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6A7B1E142D3AE6A800B3FE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2K6FMP5B8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = imapps.luziaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/luzia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/luzia";
+			};
+			name = Debug;
+		};
+		6A7B1E152D3AE6A800B3FE0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2K6FMP5B8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = imapps.luziaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/luzia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/luzia";
+			};
+			name = Release;
+		};
+		6A7B1E172D3AE6A800B3FE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2K6FMP5B8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = imapps.luziaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = luzia;
+			};
+			name = Debug;
+		};
+		6A7B1E182D3AE6A800B3FE0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2K6FMP5B8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = imapps.luziaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = luzia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A7B1DE72D3AE6A700B3FE0A /* Build configuration list for PBXProject "luzia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7B1E0E2D3AE6A800B3FE0A /* Debug */,
+				6A7B1E0F2D3AE6A800B3FE0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A7B1E102D3AE6A800B3FE0A /* Build configuration list for PBXNativeTarget "luzia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7B1E112D3AE6A800B3FE0A /* Debug */,
+				6A7B1E122D3AE6A800B3FE0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A7B1E132D3AE6A800B3FE0A /* Build configuration list for PBXNativeTarget "luziaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7B1E142D3AE6A800B3FE0A /* Debug */,
+				6A7B1E152D3AE6A800B3FE0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A7B1E162D3AE6A800B3FE0A /* Build configuration list for PBXNativeTarget "luziaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A7B1E172D3AE6A800B3FE0A /* Debug */,
+				6A7B1E182D3AE6A800B3FE0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A7B1DE42D3AE6A700B3FE0A /* Project object */;
+}
