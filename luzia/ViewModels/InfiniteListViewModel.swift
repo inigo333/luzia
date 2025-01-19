@@ -16,9 +16,6 @@ final class InfiniteListViewModel<Repository: PaginableRepository>: ObservableOb
     private let repository: Repository
     private let threshold: UInt
     
-    /// - Parameters:
-    ///   - repository: paginated repository API to retrieve corresponding items
-    ///   - threshold: indicates number of rows before the end by which more items will be requested
     init(attribute: SWApiAttribute, repository: Repository, threshold: UInt = 5) {
         self.attribute = attribute
         self.repository = repository
