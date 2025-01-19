@@ -96,8 +96,8 @@ extension Planet {
                    gravity: "1.1 standard",
                    terrain: "tundra, ice caves, mountain ranges",
                    urlString: "https://swapi.dev/api/planets/4/",
-                   pageUrlString: "https://swapi.dev/api/planets?page=1",
-                   nextPageUrlString: "https://swapi.dev/api/planets?page=2")
+                   pageUrlString: "https://swapi.dev/api/planets?page=2",
+                   nextPageUrlString: "https://swapi.dev/api/planets?page=3")
         ]
     }
 }
