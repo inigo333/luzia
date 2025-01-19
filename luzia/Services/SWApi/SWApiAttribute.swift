@@ -12,13 +12,11 @@ enum SWApiAttribute: String {
 }
 
 extension SWApiAttribute {
-    var endpoint: String { rawValue }
-    
     var endpointUrl: URL? {
         var components = URLComponents()
         components.scheme = "https"
         components.host = "swapi.dev"
-        components.path = "/api/\(endpoint)/"
+        components.path = "/api/\(rawValue)/"
         
         return components.url
     }

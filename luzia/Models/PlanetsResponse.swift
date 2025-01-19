@@ -47,3 +47,37 @@ struct PlanetsResponse: SWApiResponse {
         }
     }
 }
+
+/*
+ e.g.: https://swapi.dev/api/
+ 
+ {
+     "count": 60,
+     "next": "https://swapi.dev/api/planets/?page=2",
+     "previous": null,
+     "results": [
+         {
+             "name": "Kamino",
+             "rotation_period": "27",
+             "orbital_period": "463",
+             "diameter": "19720",
+             "climate": "temperate",
+             "gravity": "1 standard",
+             "terrain": "ocean",
+             "surface_water": "100",
+             "population": "1000000000",
+             "residents": [
+                 "https://swapi.dev/api/people/22/",
+                 "https://swapi.dev/api/people/72/",
+                 "https://swapi.dev/api/people/73/"
+             ],
+             "films": [
+                 "https://swapi.dev/api/films/5/"
+             ],
+             "created": "2014-12-10T12:45:06.577000Z",
+             "edited": "2014-12-20T20:58:18.434000Z",
+             "url": "https://swapi.dev/api/planets/10/"
+         }
+     ]
+ }
+ */

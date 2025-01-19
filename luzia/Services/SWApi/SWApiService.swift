@@ -25,9 +25,9 @@ final class SWApiService {
             throw error
         }
         
-        if let jsonString = String(data: data, encoding: .utf8) {
-            print(jsonString)
-        }
+        // if let jsonString = String(data: data, encoding: .utf8) {
+        //     print(jsonString)
+        // }
         
         switch httpResponse.statusCode {
         case 200:
