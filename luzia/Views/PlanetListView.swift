@@ -47,7 +47,9 @@ struct PlanetListView: View {
             }
             .navigationTitle(navigationTitle)
             .onAppear {
-                Task { await viewModel.requestInitialSetOfItems() }
+                if viewModel.items.isEmpty && !viewModel.isLoading {
+                    Task { await viewModel.requestInitialSetOfItems() }
+                }
             }
             .refreshable {
                 if networkMonitor.isConnected {

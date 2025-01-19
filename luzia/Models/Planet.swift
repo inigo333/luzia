@@ -18,7 +18,7 @@ final class Planet: SWApiAttributable {
     var diameter: String
     var gravity: String
     var terrain: String
-    var url: String
+    var urlString: String
     var pageUrlString: String
     var nextPageUrlString: String?
     
@@ -28,7 +28,7 @@ final class Planet: SWApiAttributable {
          diameter: String,
          gravity: String,
          terrain: String,
-         url: String,
+         urlString: String,
          pageUrlString: String,
          nextPageUrlString: String?) {
         self.name = name
@@ -37,7 +37,7 @@ final class Planet: SWApiAttributable {
         self.diameter = diameter
         self.gravity = gravity
         self.terrain = terrain
-        self.url = url
+        self.urlString = urlString
         self.pageUrlString = pageUrlString
         self.nextPageUrlString = nextPageUrlString
     }
@@ -49,7 +49,7 @@ final class Planet: SWApiAttributable {
                   diameter: planetResponse.diameter,
                   gravity: planetResponse.gravity,
                   terrain: planetResponse.terrain,
-                  url: planetResponse.url,
+                  urlString: planetResponse.urlString,
                   pageUrlString: pageUrlString,
                   nextPageUrlString: nextPageUrlString)
     }
@@ -68,7 +68,7 @@ extension Planet {
                    diameter: "10465",
                    gravity: "1 standard",
                    terrain: "desert",
-                   url: "https://swapi.dev/api/planets/1/",
+                   urlString: "https://swapi.dev/api/planets/1/",
                    pageUrlString: "https://swapi.dev/api/planets?page=1",
                    nextPageUrlString: "https://swapi.dev/api/planets?page=2"),
             Planet(name: "Alderaan",
@@ -77,7 +77,7 @@ extension Planet {
                    diameter: "12500",
                    gravity: "1 standard",
                    terrain: "grasslands, mountains",
-                   url: "https://swapi.dev/api/planets/2/",
+                   urlString: "https://swapi.dev/api/planets/2/",
                    pageUrlString: "https://swapi.dev/api/planets?page=1",
                    nextPageUrlString: "https://swapi.dev/api/planets?page=2"),
             Planet(name: "Yavin IV",
@@ -86,7 +86,7 @@ extension Planet {
                    diameter: "10200",
                    gravity: "1 standard",
                    terrain: "jungle, rainforests",
-                   url: "https://swapi.dev/api/planets/3/",
+                   urlString: "https://swapi.dev/api/planets/3/",
                    pageUrlString: "https://swapi.dev/api/planets?page=1",
                    nextPageUrlString: "https://swapi.dev/api/planets?page=2"),
             Planet(name: "Hoth",
@@ -95,7 +95,7 @@ extension Planet {
                    diameter: "7200",
                    gravity: "1.1 standard",
                    terrain: "tundra, ice caves, mountain ranges",
-                   url: "https://swapi.dev/api/planets/4/",
+                   urlString: "https://swapi.dev/api/planets/4/",
                    pageUrlString: "https://swapi.dev/api/planets?page=1",
                    nextPageUrlString: "https://swapi.dev/api/planets?page=2")
         ]

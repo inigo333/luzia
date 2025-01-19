@@ -27,7 +27,7 @@ struct PlanetsResponse: SWApiResponse {
         let films: [String]
         let created: String
         let edited: String
-        let url: String
+        let urlString: String
         
         enum CodingKeys: String, CodingKey {
             case name
@@ -43,7 +43,7 @@ struct PlanetsResponse: SWApiResponse {
             case films
             case created
             case edited
-            case url
+            case urlString = "url"
         }
     }
 }

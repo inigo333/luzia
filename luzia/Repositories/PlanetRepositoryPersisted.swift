@@ -18,7 +18,7 @@ final class PlanetRepositoryPersisted: PlanetRepository {
     
     func requestItems(pageUrlString: String) async throws -> [Planet] {
         let fetchDescriptor = FetchDescriptor<Planet>(predicate: #Predicate { $0.pageUrlString == pageUrlString },
-                                                      sortBy: [SortDescriptor(\.url)])
+                                                      sortBy: [SortDescriptor(\.urlString)])
         let items = try modelContext.fetch(fetchDescriptor)
         return items
     }
