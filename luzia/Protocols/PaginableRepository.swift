@@ -16,6 +16,5 @@ protocol PaginableRepository {
 
 extension PaginableRepository {
     func saveItems(_ items: [Item]) async throws {}
-    
     func deleteItems(_ items: [Item]?) async throws {}
 }
