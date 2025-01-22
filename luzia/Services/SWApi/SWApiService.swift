@@ -51,4 +51,32 @@ final class SWApiService {
             throw URLError(.unknown)
         }
     }
+    
+    func requestResident(residentUrlString: String) async throws -> PeopleResponse {
+        guard let pageUrl = URL(string: residentUrlString) else {
+            let error = URLError(.badURL)
+            print(error.localizedDescription)
+            throw error
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: pageUrl)
+        
+        // if let jsonString = String(data: data, encoding: .utf8) {
+        //     print(jsonString)
+        // }
+        
+        guard let httpResponse = response as? HTTPURLResponse else {
+            let error = URLError(.badServerResponse)
+            print(error.localizedDescription)
+            throw error
+        }
+        
+        switch httpResponse.statusCode {
+        case 200:
+            let resident = try JSONDecoder().decode(PeopleResponse.self, from: data)
+            return resident
+        default:
+            throw URLError(.unknown)
+        }
+    }
 }

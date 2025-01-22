@@ -18,6 +18,7 @@ final class Planet: SWApiAttributable {
     var diameter: String
     var gravity: String
     var terrain: String
+    var residentsUrlStrings: [String]
     var urlString: String
     var pageUrlString: String
     var nextPageUrlString: String?
@@ -28,6 +29,7 @@ final class Planet: SWApiAttributable {
          diameter: String,
          gravity: String,
          terrain: String,
+         residentsUrlStrings: [String],
          urlString: String,
          pageUrlString: String,
          nextPageUrlString: String?) {
@@ -37,6 +39,7 @@ final class Planet: SWApiAttributable {
         self.diameter = diameter
         self.gravity = gravity
         self.terrain = terrain
+        self.residentsUrlStrings = residentsUrlStrings
         self.urlString = urlString
         self.pageUrlString = pageUrlString
         self.nextPageUrlString = nextPageUrlString
@@ -49,6 +52,7 @@ final class Planet: SWApiAttributable {
                   diameter: planetResponse.diameter,
                   gravity: planetResponse.gravity,
                   terrain: planetResponse.terrain,
+                  residentsUrlStrings: planetResponse.residents,
                   urlString: planetResponse.urlString,
                   pageUrlString: pageUrlString,
                   nextPageUrlString: nextPageUrlString)
@@ -68,6 +72,8 @@ extension Planet {
                    diameter: "10465",
                    gravity: "1 standard",
                    terrain: "desert",
+                   residentsUrlStrings: ["https://swapi.dev/api/people/1/",
+                                         "https://swapi.dev/api/people/2/"],
                    urlString: "https://swapi.dev/api/planets/1/",
                    pageUrlString: "https://swapi.dev/api/planets?page=1",
                    nextPageUrlString: "https://swapi.dev/api/planets?page=2"),
@@ -77,6 +83,7 @@ extension Planet {
                    diameter: "12500",
                    gravity: "1 standard",
                    terrain: "grasslands, mountains",
+                   residentsUrlStrings: [],
                    urlString: "https://swapi.dev/api/planets/2/",
                    pageUrlString: "https://swapi.dev/api/planets?page=1",
                    nextPageUrlString: "https://swapi.dev/api/planets?page=2"),
@@ -86,6 +93,7 @@ extension Planet {
                    diameter: "10200",
                    gravity: "1 standard",
                    terrain: "jungle, rainforests",
+                   residentsUrlStrings: [],
                    urlString: "https://swapi.dev/api/planets/3/",
                    pageUrlString: "https://swapi.dev/api/planets?page=1",
                    nextPageUrlString: "https://swapi.dev/api/planets?page=2"),
@@ -95,6 +103,7 @@ extension Planet {
                    diameter: "7200",
                    gravity: "1.1 standard",
                    terrain: "tundra, ice caves, mountain ranges",
+                   residentsUrlStrings: [],
                    urlString: "https://swapi.dev/api/planets/4/",
                    pageUrlString: "https://swapi.dev/api/planets?page=2",
                    nextPageUrlString: "https://swapi.dev/api/planets?page=3")

@@ -9,6 +9,12 @@ import SwiftUI
 
 struct PlanetView: View {
     var planet: Planet
+    @StateObject var viewModel: PlanetViewModel
+    
+    init(planet: Planet) {
+        self.planet = planet
+        _viewModel = StateObject(wrappedValue: PlanetViewModel(planet: planet))
+    }
     
     var body: some View {
         ScrollView {
@@ -18,11 +24,19 @@ struct PlanetView: View {
                     .padding(.top, 20)
                 
                 VStack(spacing: 16) {
-                    planetInfoRow(title: "Climate", value: planet.climate)
-                    planetInfoRow(title: "Population", value: planet.population.prettyPrinted())
-                    planetInfoRow(title: "Diameter", value: planet.diameter.prettyPrinted())
-                    planetInfoRow(title: "Gravity", value: planet.gravity)
-                    planetInfoRow(title: "Terrain", value: planet.terrain)
+                    InfoRow(title: "Climate", value: planet.climate)
+                    InfoRow(title: "Population", value: planet.population.prettyPrinted())
+                    InfoRow(title: "Diameter", value: planet.diameter.prettyPrinted())
+                    InfoRow(title: "Gravity", value: planet.gravity)
+                    InfoRow(title: "Terrain", value: planet.terrain)
+                    InfoRow(title: "Residents", value: "")
+                    LazyVStack(alignment: .leading) {
+                        ForEach(viewModel.residents) { resident in
+                            NavigationLink(value: resident) {
+                                Text(resident.name)
+                            }
+                        }
+                    }
                 }
                 .padding()
                 .background(
@@ -33,18 +47,14 @@ struct PlanetView: View {
                 .padding(.horizontal)
             }
         }
+        .navigationDestination(for: PeopleResponse.self) { resident in
+            ResidentView(resident: resident)
+        }
         .navigationBarTitleDisplayMode(.inline)
-    }
-    
-    private func planetInfoRow(title: String, value: String) -> some View {
-        HStack {
-            Text(title)
-                .font(.headline)
-                .foregroundColor(.secondary)
-            Spacer()
-            Text(value)
-                .font(.body)
-                .multilineTextAlignment(.trailing)
+        .onAppear() {
+            Task {
+                try await viewModel.requestResidents()
+            }
         }
     }
 }
